@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年农业调查任务时间表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .update-time {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        
+        .month-section {
+            margin-bottom: 40px;
+        }
+        
+        .month-title {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+        }
+        
+        .tasks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .task-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .task-card.urgent {
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .task-card.warning {
+            border-left: 5px solid #f39c12;
+        }
+        
+        .task-card.exempt {
+            opacity: 0.6;
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .table-no {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .badge.urgent {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .badge.warning {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .badge.exempt {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .task-title {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .task-content {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .task-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            background: #ecf0f1;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            color: #34495e;
+        }
+        
+        .card-footer {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-top: 1px solid #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .date-item {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            padding: 30px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .tasks-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌾 2026年农业调查任务时间表</h1>
+            <p>国家统计局安徽调查总队</p>
+            <div class="update-time">
+                📅 最后更新: 2026年07月02日 22:56
+            </div>
+        </div>
+        
+        <div class="tasks-container">
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 1月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M202表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗基层表</h3>
+                                <p class="task-content">畜牧业、茶叶年报</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 年报</span>
+                                    <span class="meta-item">🏢 全部县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年1月10日前</span>
+                                <span class="date-item">📅 省级: 2026年1月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M403表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗</h3>
+                                <p class="task-content">畜牧业、茶叶年报</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 年报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年1月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content">全省10个集贸市场价格数据</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年1月26日前</span>
+                                <span class="date-item">📅 省级: 2026年1月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A202表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物遥感测量和对地调查样方自然地块调查表</h3>
+                                <p class="task-content">秋冬播面积</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年1月25日前</span>
+                                <span class="date-item">📅 省级: 2026年2月10日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 2月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年2月26日前</span>
+                                <span class="date-item">📅 省级: 2026年2月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A401表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农户种植意向调查表</h3>
+                                <p class="task-content">全年种植意向</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年2月28日前</span>
+                                <span class="date-item">📅 省级: 2026年3月10日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 3月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M201表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格基层表</h3>
+                                <p class="task-content">一季度农产品价格数据</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 有关市县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年3月20日前</span>
+                                <span class="date-item">📅 省级: 2026年3月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M402表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格指数</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年3月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">3月中旬冬小麦长势测量结果及相关报告</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年3月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年3月26日前</span>
+                                <span class="date-item">📅 省级: 2026年3月26日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 4月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">4月中旬冬小麦长势测量结果及相关报告</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年4月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年4月26日前</span>
+                                <span class="date-item">📅 省级: 2026年4月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A202表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物遥感测量和对地调查样方自然地块调查表</h3>
+                                <p class="task-content">早稻播种面积</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年4月30日前</span>
+                                <span class="date-item">📅 省级: 2026年5月15日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 5月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A204表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物预计产量卡片</h3>
+                                <p class="task-content">夏收粮食预计产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年5月15日前</span>
+                                <span class="date-item">📅 省级: 2026年5月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年5月26日前</span>
+                                <span class="date-item">📅 省级: 2026年5月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">冬小麦空间分布测量结果</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年5月30日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 6月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A205表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产量抽样调查放样实测作物卡片</h3>
+                                <p class="task-content">夏收粮食实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年6月10日前</span>
+                                <span class="date-item">📅 省级: 2026年6月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A207表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物非放样实测卡片</h3>
+                                <p class="task-content">夏收粮食实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年6月10日前</span>
+                                <span class="date-item">📅 省级: 2026年6月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">A402表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">粮食作物生产情况季节报表</h3>
+                                <p class="task-content">夏收粮食实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年6月10日前</span>
+                                <span class="date-item">📅 省级: 2026年6月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M201表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格基层表</h3>
+                                <p class="task-content">二季度农产品价格数据</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 有关市县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年6月20日前</span>
+                                <span class="date-item">📅 省级: 2026年6月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M402表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格指数</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年6月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年6月26日前</span>
+                                <span class="date-item">📅 省级: 2026年6月26日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 7月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M202表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗基层表</h3>
+                                <p class="task-content">夏粮、夏油</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月2日前</span>
+                                <span class="date-item">📅 省级: 2026年7月10日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M202表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗基层表</h3>
+                                <p class="task-content">畜牧业半年报</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 半年报</span>
+                                    <span class="meta-item">🏢 全部县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月5日前</span>
+                                <span class="date-item">📅 省级: 2026年7月10日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M101表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">样本单位基本情况表</h3>
+                                <p class="task-content">夏粮、夏油、畜牧业</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 年报</span>
+                                    <span class="meta-item">🏢 全部县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月2日前</span>
+                                <span class="date-item">📅 省级: 2026年7月15日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M403表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗</h3>
+                                <p class="task-content">夏粮、夏油</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月2日前</span>
+                                <span class="date-item">📅 省级: 2026年7月15日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card urgent">
+                            <div class="card-header">
+                                <span class="table-no">M403表</span>
+                                <span class="badge urgent">紧急</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗</h3>
+                                <p class="task-content">畜牧业半年报</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 半年报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月5日前</span>
+                                <span class="date-item">📅 省级: 2026年7月10日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card warning">
+                            <div class="card-header">
+                                <span class="table-no">A204表</span>
+                                <span class="badge warning">即将到期</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物预计产量卡片</h3>
+                                <p class="task-content">早稻预计产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月10日前</span>
+                                <span class="date-item">📅 省级: 2026年7月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card warning">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                <span class="badge warning">即将到期</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">7月中旬中稻和一季晚稻长势测量结果及相关报告</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年7月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card warning">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                <span class="badge warning">即将到期</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">7月中旬玉米长势测量结果及相关报告</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年7月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card warning">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                <span class="badge warning">即将到期</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月26日前</span>
+                                <span class="date-item">📅 省级: 2026年7月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card warning">
+                            <div class="card-header">
+                                <span class="table-no">A205表</span>
+                                <span class="badge warning">即将到期</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产量抽样调查放样实测作物卡片</h3>
+                                <p class="task-content">早稻实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月31日前</span>
+                                <span class="date-item">📅 省级: 2026年8月10日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card warning">
+                            <div class="card-header">
+                                <span class="table-no">A402表</span>
+                                <span class="badge warning">即将到期</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">粮食作物生产情况季节报表</h3>
+                                <p class="task-content">早稻实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年7月31日前</span>
+                                <span class="date-item">📅 省级: 2026年8月10日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 8月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M202表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗基层表</h3>
+                                <p class="task-content">早稻</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年8月10日前</span>
+                                <span class="date-item">📅 省级: 2026年8月15日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M403表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗</h3>
+                                <p class="task-content">早稻</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年8月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A202表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物遥感测量和对地调查样方自然地块调查表</h3>
+                                <p class="task-content">春播、夏播面积</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年8月10日前</span>
+                                <span class="date-item">📅 省级: 2026年8月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">8月中旬中稻和一季晚稻长势测量结果及相关报告</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年8月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">8月中旬玉米长势测量结果及相关报告</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年8月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年8月26日前</span>
+                                <span class="date-item">📅 省级: 2026年8月26日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 9月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A204表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物预计产量卡片</h3>
+                                <p class="task-content">秋收粮食预计产量，复合种植和再生稻相关指标</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年9月10日前</span>
+                                <span class="date-item">📅 省级: 2026年9月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M201表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格基层表</h3>
+                                <p class="task-content">三季度农产品价格数据</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 有关市县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年9月20日前</span>
+                                <span class="date-item">📅 省级: 2026年9月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M402表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格指数</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年9月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">中稻和一季晚稻空间分布测量结果</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年9月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">玉米空间分布测量结果</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年9月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年9月26日前</span>
+                                <span class="date-item">📅 省级: 2026年9月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A401表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农户种植意向调查表</h3>
+                                <p class="task-content">秋冬播种植意向</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年9月20日前</span>
+                                <span class="date-item">📅 省级: 2026年9月30日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 10月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A201表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物遥感测量和对地调查样方自然地块登记表</h3>
+                                <p class="task-content">自然地块信息</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年10月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A413表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农作物种植空间分布和长势测量表</h3>
+                                <p class="task-content">全面测量用数据</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年10月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年10月26日前</span>
+                                <span class="date-item">📅 省级: 2026年10月26日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 11月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A205表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产量抽样调查放样实测作物卡片</h3>
+                                <p class="task-content">秋收粮食实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年11月5日前</span>
+                                <span class="date-item">📅 省级: 2026年11月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A207表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农作物非放样实测卡片</h3>
+                                <p class="task-content">秋收粮食实际产量</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年11月5日前</span>
+                                <span class="date-item">📅 省级: 2026年11月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A402表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">粮食作物生产情况季节报表</h3>
+                                <p class="task-content">秋收粮食实际产量，复合种植和再生稻相关指标</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部调查县（市、区）</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年11月5日前</span>
+                                <span class="date-item">📅 省级: 2026年11月20日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M202表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗基层表</h3>
+                                <p class="task-content">棉花、秋粮</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 全部县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年11月20日前</span>
+                                <span class="date-item">📅 省级: 2026年11月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年11月26日前</span>
+                                <span class="date-item">📅 省级: 2026年11月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M403表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">主要农产品中间消耗</h3>
+                                <p class="task-content">棉花、秋粮</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年11月30日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="month-section">
+                    <h2 class="month-title">📅 12月</h2>
+                    <div class="tasks-grid">
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M201表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格基层表</h3>
+                                <p class="task-content">四季度农产品价格数据</p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 有关市县调查队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年12月20日前</span>
+                                <span class="date-item">📅 省级: 2026年12月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M402表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格指数</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年12月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M402表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品生产者价格指数</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 年报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: ——</span>
+                                <span class="date-item">📅 省级: 2026年12月25日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">M405表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">农产品集贸市场价格</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 月报</span>
+                                    <span class="meta-item">🏢 抽中县队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 2026年12月26日前</span>
+                                <span class="date-item">📅 省级: 2026年12月26日前</span>
+                            </div>
+                        </div>
+                        <div class="task-card">
+                            <div class="card-header">
+                                <span class="table-no">A405表</span>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h3 class="task-title">产粮大县粮食作物生产情况</h3>
+                                <p class="task-content"></p>
+                                <div class="task-meta">
+                                    <span class="meta-item">📊 季节报</span>
+                                    <span class="meta-item">🏢 总队</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="date-item">📅 市县: 市县免报</span>
+                                <span class="date-item">📅 省级: 2026年12月30日前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        
+        <div class="footer">
+            <p>🌱 数据来源: 2026年农业调查任务标准时间表</p>
+            <p>💡 提示: 红色标记为7天内紧急任务，黄色为30天内即将到期任务</p>
+            <p>🔗 GitHub: <a href="https://github.com/zyp101/agri-survey-reminder" style="color: white;">agri-survey-reminder</a></p>
+        </div>
+    </div>
+</body>
+</html>
